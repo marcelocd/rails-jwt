@@ -4,7 +4,7 @@ class ApplicationController < ActionController::API
   end
 
   def authorize_request
-    header = request.header['AUTHORIZATION']
+    header = request.headers['AUTHORIZATION']
     header = header.split(' ').last if header
 
     begin
